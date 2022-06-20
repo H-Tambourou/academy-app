@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    background: #0e1214;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    height: 80px;
+    padding: 1rem 1.5rem;
+    color: #9e9e9e;
+}
+
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    padding: 1rem;
+    cursor: pointer;
+    color: #9e9e9e;
+    font-size: 18px;
+}
+
+.section {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    color: white;
+}
+
