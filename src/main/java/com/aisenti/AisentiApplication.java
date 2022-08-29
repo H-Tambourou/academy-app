@@ -1,13 +1,13 @@
-package com.example.academy;
+package com.aisenti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AcademyApplication {
+public class AisentiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AcademyApplication.class, args);
+		SpringApplication.run(AisentiApplication.class, args);
 	}
 
 }
