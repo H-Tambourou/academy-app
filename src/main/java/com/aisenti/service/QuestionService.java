@@ -6,4 +6,8 @@ public interface QuestionService {
 
     Question createQuestion(Question question);
 
+    void deleteQuestion(Question question);
+
+    Question getProjectById(Long id);
+
 }

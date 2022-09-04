@@ -1,5 +1,7 @@
 package com.aisenti.service.impl;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,20 @@ public class QuestionServiceImpl implements QuestionService {
     public Question createQuestion(Question question) {
         questionRepository.save(question);
         return question;
+    }
+
+    @Override
+    public void deleteQuestion(Question question) {
+        questionRepository.delete(question);
+    }
+
+    @Override
+    public Question getProjectById(Long id) {
+        Optional<Question> question = questionRepository.findById(id);
+        if (question.isPresent()) {
+            return question.get();
+        }
+        return null;
     }
 
 }
