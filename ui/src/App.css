@@ -140,8 +140,49 @@
     flex-direction: column;
     width: 400px;
     height: 250px;
-    background-color: #e906e7;
-    border-radius: 25px;
+    background-color: #9c27b0;
+    border-radius: 10px;
+    padding: 0px 2vw;
+}
+
+.form h2 {
+    margin: 0 0 30px;
+    color: white;
+    text-align: center;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+}
+
+.form input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.btn {
+    padding: 6px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0f85ef;
 }
 
 

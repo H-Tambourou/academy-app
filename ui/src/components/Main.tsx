@@ -1,11 +1,11 @@
-import AddQuestion from "./AddQuestion";
+import Question from "./Question";
 import SearchBar from "./SearchBar";
 
 const Main = () => {
   return (
     <div className="main">
       <SearchBar />
-      <AddQuestion />
+      <Question />
     </div>
   )
 }

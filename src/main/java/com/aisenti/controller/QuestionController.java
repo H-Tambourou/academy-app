@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.aisenti.model.Question;
@@ -18,7 +20,7 @@ public class QuestionController {
     QuestionService questionService;
 
     @PostMapping("/createNewQuestion")
-    public ResponseEntity createNewQuestion(Question question) {
+    public ResponseEntity createNewQuestion(@RequestBody Question question) {
         if (question != null) {
             questionService.createQuestion(question);
             return ResponseEntity.status(HttpStatus.CREATED).body("success");
@@ -28,7 +30,7 @@ public class QuestionController {
     }
 
     @PostMapping("/deleteQuestion")
-    public ResponseEntity deleteQuestion(Long id) {
+    public ResponseEntity deleteQuestion(@RequestParam Long id) {
         Question question = questionService.getProjectById(id);
         if (question != null) {
             questionService.deleteQuestion(question);
