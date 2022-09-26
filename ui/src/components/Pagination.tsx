@@ -1,17 +1,15 @@
-import { useState, useEffect, Key } from 'react';
+import { useState, Key } from 'react';
 import Card from './Card';
 
 type PaginationProps = {
   data: any,
   dataLimit: number,
-
 }
 
 const Pagination = ({ data, dataLimit }: PaginationProps) => {
   const [pages] = useState(Math.round(data.length / dataLimit) + 1);
   const pageLimit = Math.round(data.length / dataLimit);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  console.log("data length", data.length, "pages", pages, "pages limit", pageLimit)
 
   const goToNextPage = () => {
     setCurrentPage((page) => page + 1);
@@ -37,13 +35,9 @@ const Pagination = ({ data, dataLimit }: PaginationProps) => {
     return new Array(pageLimit).fill(null).map((_, idx) => start + idx + 1);
   };
 
-  // useEffect(() => {
-  //   window.scrollTo({ behavior: 'smooth', top: 0 });
-  // }, [currentPage]);
-
   return (
     <>
-      <div className="grid">
+      <div className="grid-container">
         {getPaginatedData().map((d: any, index: Key | null | undefined) => (
             <Card key={index} data={d} />
         ))}

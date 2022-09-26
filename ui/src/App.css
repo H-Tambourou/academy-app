@@ -67,14 +67,16 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  flex-direction: column;
 }
 
 .searchBar {
     width: fit-content;
     height: fit-content;
     position: relative;
-    padding-top: 5vw;
+    margin-bottom: 2vw;
     background-color: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
     display: flex;
@@ -107,12 +109,30 @@
     border-radius: 25px;
     padding: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
+    margin: 2vw;
 }
 
-.grid {
-  
+.card-butn-gr {
+  margin-top: 3vw;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.card-butn {
+    cursor: pointer;
+    color: #000;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
 }
 
 .pagination {

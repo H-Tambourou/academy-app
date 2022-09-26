@@ -32,7 +32,7 @@ const Question = () => {
     <>
       <div className="addGroup">
         <BiAddToQueue onClick={() => setShowForm(true)} className='addGroup-Icon' style={{width:"40px", height:"40px", cursor:"pointer"}} />
-        <span>Add your question</span>
+        <span>Add a question</span>
       </div>
       <div className={`form-wrapper ${showForm}`}>
         <form className="form" onSubmit={handleNewQuestion}>

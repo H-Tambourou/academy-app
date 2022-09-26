@@ -6,7 +6,7 @@ const addQuestion = async (data: any) => {
 };
 
 const questionService = {
-    addQuestion
+  addQuestion
 };
 
 export default questionService;
