@@ -1,5 +1,7 @@
 package com.aisenti.service;
 
+import java.util.List;
+
 import com.aisenti.model.Question;
 
 public interface QuestionService {
@@ -8,6 +10,8 @@ public interface QuestionService {
 
     void deleteQuestion(Question question);
 
-    Question getProjectById(Long id);
+    List<Question> getAllQuestions();
+
+    Question getQuestionById(Long id);
 
 }

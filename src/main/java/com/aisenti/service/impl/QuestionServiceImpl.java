@@ -1,5 +1,6 @@
 package com.aisenti.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,13 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public Question getProjectById(Long id) {
+    public List<Question> getAllQuestions() {
+        List<Question> questions = questionRepository.findAll();
+        return questions;
+    }
+
+    @Override
+    public Question getQuestionById(Long id) {
         Optional<Question> question = questionRepository.findById(id);
         if (question.isPresent()) {
             return question.get();

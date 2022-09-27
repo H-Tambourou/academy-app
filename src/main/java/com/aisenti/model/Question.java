@@ -31,6 +31,9 @@ public class Question {
     @Column
     private String creationCode;
 
+    public Question() {
+    }
+
     public Question(String title, String creationCode) {
         this.title = title;
         this.creationCode = creationCode;

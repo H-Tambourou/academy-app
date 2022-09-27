@@ -5,8 +5,14 @@ const addQuestion = async (data: any) => {
   return response;
 };
 
+const getAllQuestions = async () => {
+  const response = await axios.get("/api/getAllQuestions");
+  return response.data;
+}
+
 const questionService = {
-  addQuestion
+  addQuestion,
+  getAllQuestions
 };
 
 export default questionService;

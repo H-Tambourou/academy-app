@@ -1,8 +1,11 @@
 package com.aisenti.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,13 +34,19 @@ public class QuestionController {
 
     @PostMapping("/deleteQuestion")
     public ResponseEntity deleteQuestion(@RequestParam Long id) {
-        Question question = questionService.getProjectById(id);
+        Question question = questionService.getQuestionById(id);
         if (question != null) {
             questionService.deleteQuestion(question);
             return ResponseEntity.status(HttpStatus.ACCEPTED).body("deleted");
         } else {
             return null;
         }
+    }
+
+    @GetMapping("/getAllQuestions")
+    public List<Question> getAllQuestions() {
+        List<Question> questions = questionService.getAllQuestions();
+        return questions;
     }
 
 }
